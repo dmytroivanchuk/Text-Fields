@@ -8,65 +8,34 @@
 
 /* Begin PBXBuildFile section */
 		02727E8F2897FB9A00B7D304 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02727E8E2897FB9A00B7D304 /* AppDelegate.swift */; };
-		02727E912897FB9A00B7D304 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02727E902897FB9A00B7D304 /* SceneDelegate.swift */; };
 		02727E932897FB9A00B7D304 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02727E922897FB9A00B7D304 /* ViewController.swift */; };
-		02727E962897FB9A00B7D304 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 02727E942897FB9A00B7D304 /* Main.storyboard */; };
 		02727E982897FB9C00B7D304 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 02727E972897FB9C00B7D304 /* Assets.xcassets */; };
 		02727E9B2897FB9C00B7D304 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 02727E992897FB9C00B7D304 /* LaunchScreen.storyboard */; };
-		02727EA62897FB9C00B7D304 /* TEXT_FIELDS_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02727EA52897FB9C00B7D304 /* TEXT_FIELDS_Tests.swift */; };
-		02727EB02897FB9C00B7D304 /* TEXT_FIELDS_UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02727EAF2897FB9C00B7D304 /* TEXT_FIELDS_UITests.swift */; };
-		02727EB22897FB9C00B7D304 /* TEXT_FIELDS_UITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02727EB12897FB9C00B7D304 /* TEXT_FIELDS_UITestsLaunchTests.swift */; };
+		02727EC02898038500B7D304 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 02727EBF2898038500B7D304 /* ViewController.xib */; };
+		02727EC22898058800B7D304 /* TextFieldView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 02727EC12898058800B7D304 /* TextFieldView.xib */; };
+		02727EC428980B8000B7D304 /* TextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02727EC328980B8000B7D304 /* TextFieldView.swift */; };
+		02D830AB28984D6F00CEDEA0 /* Rubik-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 02D830A928984D6F00CEDEA0 /* Rubik-Medium.ttf */; };
+		02D830AC28984D6F00CEDEA0 /* Rubik-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 02D830AA28984D6F00CEDEA0 /* Rubik-Regular.ttf */; };
+		02D830AE289A949C00CEDEA0 /* InputValidationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D830AD289A949C00CEDEA0 /* InputValidationModel.swift */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		02727EA22897FB9C00B7D304 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 02727E832897FB9A00B7D304 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 02727E8A2897FB9A00B7D304;
-			remoteInfo = "TEXT FIELDS!";
-		};
-		02727EAC2897FB9C00B7D304 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 02727E832897FB9A00B7D304 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 02727E8A2897FB9A00B7D304;
-			remoteInfo = "TEXT FIELDS!";
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		02727E8B2897FB9A00B7D304 /* TEXT FIELDS!.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TEXT FIELDS!.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		02727E8E2897FB9A00B7D304 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		02727E902897FB9A00B7D304 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		02727E922897FB9A00B7D304 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		02727E952897FB9A00B7D304 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		02727E972897FB9C00B7D304 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		02727E9A2897FB9C00B7D304 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		02727E9C2897FB9C00B7D304 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		02727EA12897FB9C00B7D304 /* TEXT FIELDS!Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "TEXT FIELDS!Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		02727EA52897FB9C00B7D304 /* TEXT_FIELDS_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TEXT_FIELDS_Tests.swift; sourceTree = "<group>"; };
-		02727EAB2897FB9C00B7D304 /* TEXT FIELDS!UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "TEXT FIELDS!UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		02727EAF2897FB9C00B7D304 /* TEXT_FIELDS_UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TEXT_FIELDS_UITests.swift; sourceTree = "<group>"; };
-		02727EB12897FB9C00B7D304 /* TEXT_FIELDS_UITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TEXT_FIELDS_UITestsLaunchTests.swift; sourceTree = "<group>"; };
+		02727EBF2898038500B7D304 /* ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ViewController.xib; sourceTree = "<group>"; };
+		02727EC12898058800B7D304 /* TextFieldView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TextFieldView.xib; sourceTree = "<group>"; };
+		02727EC328980B8000B7D304 /* TextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldView.swift; sourceTree = "<group>"; };
+		02D830A928984D6F00CEDEA0 /* Rubik-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-Medium.ttf"; sourceTree = "<group>"; };
+		02D830AA28984D6F00CEDEA0 /* Rubik-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-Regular.ttf"; sourceTree = "<group>"; };
+		02D830AD289A949C00CEDEA0 /* InputValidationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputValidationModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		02727E882897FB9A00B7D304 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		02727E9E2897FB9C00B7D304 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		02727EA82897FB9C00B7D304 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -80,8 +49,6 @@
 			isa = PBXGroup;
 			children = (
 				02727E8D2897FB9A00B7D304 /* TEXT FIELDS! */,
-				02727EA42897FB9C00B7D304 /* TEXT FIELDS!Tests */,
-				02727EAE2897FB9C00B7D304 /* TEXT FIELDS!UITests */,
 				02727E8C2897FB9A00B7D304 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -90,8 +57,6 @@
 			isa = PBXGroup;
 			children = (
 				02727E8B2897FB9A00B7D304 /* TEXT FIELDS!.app */,
-				02727EA12897FB9C00B7D304 /* TEXT FIELDS!Tests.xctest */,
-				02727EAB2897FB9C00B7D304 /* TEXT FIELDS!UITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -100,31 +65,50 @@
 			isa = PBXGroup;
 			children = (
 				02727E8E2897FB9A00B7D304 /* AppDelegate.swift */,
-				02727E902897FB9A00B7D304 /* SceneDelegate.swift */,
-				02727E922897FB9A00B7D304 /* ViewController.swift */,
-				02727E942897FB9A00B7D304 /* Main.storyboard */,
+				02D830B1289A94CE00CEDEA0 /* Controllers */,
+				02D830B0289A94C500CEDEA0 /* Models */,
+				02D830AF289A94B900CEDEA0 /* Views */,
 				02727E972897FB9C00B7D304 /* Assets.xcassets */,
-				02727E992897FB9C00B7D304 /* LaunchScreen.storyboard */,
 				02727E9C2897FB9C00B7D304 /* Info.plist */,
+				02727EC5289839E600B7D304 /* fonts */,
 			);
 			path = "TEXT FIELDS!";
 			sourceTree = "<group>";
 		};
-		02727EA42897FB9C00B7D304 /* TEXT FIELDS!Tests */ = {
+		02727EC5289839E600B7D304 /* fonts */ = {
 			isa = PBXGroup;
 			children = (
-				02727EA52897FB9C00B7D304 /* TEXT_FIELDS_Tests.swift */,
+				02D830AA28984D6F00CEDEA0 /* Rubik-Regular.ttf */,
+				02D830A928984D6F00CEDEA0 /* Rubik-Medium.ttf */,
 			);
-			path = "TEXT FIELDS!Tests";
+			path = fonts;
 			sourceTree = "<group>";
 		};
-		02727EAE2897FB9C00B7D304 /* TEXT FIELDS!UITests */ = {
+		02D830AF289A94B900CEDEA0 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				02727EAF2897FB9C00B7D304 /* TEXT_FIELDS_UITests.swift */,
-				02727EB12897FB9C00B7D304 /* TEXT_FIELDS_UITestsLaunchTests.swift */,
+				02727EC328980B8000B7D304 /* TextFieldView.swift */,
+				02727EC12898058800B7D304 /* TextFieldView.xib */,
+				02727E992897FB9C00B7D304 /* LaunchScreen.storyboard */,
 			);
-			path = "TEXT FIELDS!UITests";
+			path = Views;
+			sourceTree = "<group>";
+		};
+		02D830B0289A94C500CEDEA0 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				02D830AD289A949C00CEDEA0 /* InputValidationModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		02D830B1289A94CE00CEDEA0 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				02727EBF2898038500B7D304 /* ViewController.xib */,
+				02727E922897FB9A00B7D304 /* ViewController.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -147,42 +131,6 @@
 			productReference = 02727E8B2897FB9A00B7D304 /* TEXT FIELDS!.app */;
 			productType = "com.apple.product-type.application";
 		};
-		02727EA02897FB9C00B7D304 /* TEXT FIELDS!Tests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 02727EB82897FB9C00B7D304 /* Build configuration list for PBXNativeTarget "TEXT FIELDS!Tests" */;
-			buildPhases = (
-				02727E9D2897FB9C00B7D304 /* Sources */,
-				02727E9E2897FB9C00B7D304 /* Frameworks */,
-				02727E9F2897FB9C00B7D304 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				02727EA32897FB9C00B7D304 /* PBXTargetDependency */,
-			);
-			name = "TEXT FIELDS!Tests";
-			productName = "TEXT FIELDS!Tests";
-			productReference = 02727EA12897FB9C00B7D304 /* TEXT FIELDS!Tests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		02727EAA2897FB9C00B7D304 /* TEXT FIELDS!UITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 02727EBB2897FB9C00B7D304 /* Build configuration list for PBXNativeTarget "TEXT FIELDS!UITests" */;
-			buildPhases = (
-				02727EA72897FB9C00B7D304 /* Sources */,
-				02727EA82897FB9C00B7D304 /* Frameworks */,
-				02727EA92897FB9C00B7D304 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				02727EAD2897FB9C00B7D304 /* PBXTargetDependency */,
-			);
-			name = "TEXT FIELDS!UITests";
-			productName = "TEXT FIELDS!UITests";
-			productReference = 02727EAB2897FB9C00B7D304 /* TEXT FIELDS!UITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -195,14 +143,6 @@
 				TargetAttributes = {
 					02727E8A2897FB9A00B7D304 = {
 						CreatedOnToolsVersion = 13.4.1;
-					};
-					02727EA02897FB9C00B7D304 = {
-						CreatedOnToolsVersion = 13.4.1;
-						TestTargetID = 02727E8A2897FB9A00B7D304;
-					};
-					02727EAA2897FB9C00B7D304 = {
-						CreatedOnToolsVersion = 13.4.1;
-						TestTargetID = 02727E8A2897FB9A00B7D304;
 					};
 				};
 			};
@@ -220,8 +160,6 @@
 			projectRoot = "";
 			targets = (
 				02727E8A2897FB9A00B7D304 /* TEXT FIELDS! */,
-				02727EA02897FB9C00B7D304 /* TEXT FIELDS!Tests */,
-				02727EAA2897FB9C00B7D304 /* TEXT FIELDS!UITests */,
 			);
 		};
 /* End PBXProject section */
@@ -232,22 +170,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				02727E9B2897FB9C00B7D304 /* LaunchScreen.storyboard in Resources */,
+				02D830AC28984D6F00CEDEA0 /* Rubik-Regular.ttf in Resources */,
+				02727EC02898038500B7D304 /* ViewController.xib in Resources */,
 				02727E982897FB9C00B7D304 /* Assets.xcassets in Resources */,
-				02727E962897FB9A00B7D304 /* Main.storyboard in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		02727E9F2897FB9C00B7D304 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		02727EA92897FB9C00B7D304 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+				02727EC22898058800B7D304 /* TextFieldView.xib in Resources */,
+				02D830AB28984D6F00CEDEA0 /* Rubik-Medium.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,53 +185,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				02727EC428980B8000B7D304 /* TextFieldView.swift in Sources */,
+				02D830AE289A949C00CEDEA0 /* InputValidationModel.swift in Sources */,
 				02727E932897FB9A00B7D304 /* ViewController.swift in Sources */,
 				02727E8F2897FB9A00B7D304 /* AppDelegate.swift in Sources */,
-				02727E912897FB9A00B7D304 /* SceneDelegate.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		02727E9D2897FB9C00B7D304 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				02727EA62897FB9C00B7D304 /* TEXT_FIELDS_Tests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		02727EA72897FB9C00B7D304 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				02727EB22897FB9C00B7D304 /* TEXT_FIELDS_UITestsLaunchTests.swift in Sources */,
-				02727EB02897FB9C00B7D304 /* TEXT_FIELDS_UITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
-/* Begin PBXTargetDependency section */
-		02727EA32897FB9C00B7D304 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 02727E8A2897FB9A00B7D304 /* TEXT FIELDS! */;
-			targetProxy = 02727EA22897FB9C00B7D304 /* PBXContainerItemProxy */;
-		};
-		02727EAD2897FB9C00B7D304 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 02727E8A2897FB9A00B7D304 /* TEXT FIELDS! */;
-			targetProxy = 02727EAC2897FB9C00B7D304 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
-
 /* Begin PBXVariantGroup section */
-		02727E942897FB9A00B7D304 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				02727E952897FB9A00B7D304 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		02727E992897FB9C00B7D304 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -442,9 +332,9 @@
 				INFOPLIST_FILE = "TEXT FIELDS!/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -470,9 +360,9 @@
 				INFOPLIST_FILE = "TEXT FIELDS!/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -483,82 +373,6 @@
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
-		};
-		02727EB92897FB9C00B7D304 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 82896UQ72B;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.dmytroivanchuk1998.TEXT-FIELDS-Tests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TEXT FIELDS!.app/TEXT FIELDS!";
-			};
-			name = Debug;
-		};
-		02727EBA2897FB9C00B7D304 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 82896UQ72B;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.dmytroivanchuk1998.TEXT-FIELDS-Tests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TEXT FIELDS!.app/TEXT FIELDS!";
-			};
-			name = Release;
-		};
-		02727EBC2897FB9C00B7D304 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 82896UQ72B;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.dmytroivanchuk1998.TEXT-FIELDS-UITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = "TEXT FIELDS!";
-			};
-			name = Debug;
-		};
-		02727EBD2897FB9C00B7D304 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 82896UQ72B;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.dmytroivanchuk1998.TEXT-FIELDS-UITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = "TEXT FIELDS!";
 			};
 			name = Release;
 		};
@@ -579,24 +393,6 @@
 			buildConfigurations = (
 				02727EB62897FB9C00B7D304 /* Debug */,
 				02727EB72897FB9C00B7D304 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		02727EB82897FB9C00B7D304 /* Build configuration list for PBXNativeTarget "TEXT FIELDS!Tests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				02727EB92897FB9C00B7D304 /* Debug */,
-				02727EBA2897FB9C00B7D304 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		02727EBB2897FB9C00B7D304 /* Build configuration list for PBXNativeTarget "TEXT FIELDS!UITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				02727EBC2897FB9C00B7D304 /* Debug */,
-				02727EBD2897FB9C00B7D304 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

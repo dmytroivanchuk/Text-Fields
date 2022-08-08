@@ -11,10 +11,6 @@ class ViewControllerUITests: XCTestCase {
 
     override func setUpWithError() throws {
         continueAfterFailure = false
-        
-    }
-
-    override func tearDownWithError() throws {
     }
 
     func test_noDigitsTextField_withInput_shouldReturnNoDigitsText() throws {
@@ -22,8 +18,8 @@ class ViewControllerUITests: XCTestCase {
         app.launch()
         
         app.textFields["noDigitsTextField"].tap()
-        app.textFields["noDigitsTextField"].typeText("String with 123 digits")
-        XCTAssertEqual(app.textFields["noDigitsTextField"].value as! String, "String with  digits")
+        app.textFields["noDigitsTextField"].typeText("String with 123 and 456 digits")
+        XCTAssertEqual(app.textFields["noDigitsTextField"].value as! String, "String with  and  digits")
     }
         
     func test_inputLimitTextField_withInput_shouldShowSpecifiedCharacterCounterLabel() throws {
@@ -31,10 +27,10 @@ class ViewControllerUITests: XCTestCase {
         app.launch()
         
         app.textFields["inputLimitTextField"].tap()
-        app.textFields["inputLimitTextField"].typeText("Long string with overflow")
+        app.textFields["inputLimitTextField"].typeText("Long string with overflow characters")
         app.staticTexts["Only characters"].tap()
         app.textFields["inputLimitTextField"].tap()
-        XCTAssertEqual(app.staticTexts["characterCounterLabel"].label, "25/10")
+        XCTAssertEqual(app.staticTexts["characterCounterLabel"].label, "36/10")
     }
         
     func test_onlyCharactersTextField_withInput_shouldReturnMaskedText() throws {
@@ -55,18 +51,18 @@ class ViewControllerUITests: XCTestCase {
         XCTAssertEqual(app.textFields["onlyCharactersTextField"].value as! String, "abcde-12345")
     }
         
-    func test_linkTextField_withHttpFormattedInput_shouldPresentDetectedLink() throws {
+    func test_linkTextField_withInput_shouldPresentDetectedLink() throws {
         
         func testLink(withFormat format: String) {
             let app = XCUIApplication()
             app.launch()
             
             app.textFields["linkTextField"].tap()
-            app.textFields["linkTextField"].typeText(format + "foxminded.ua")
+            app.textFields["linkTextField"].typeText(format + "google.com")
             sleep(2)
             
             let safariURL = app.otherElements["URL"].value as! String
-            XCTAssert(safariURL.contains("foxminded.ua"))
+            XCTAssert(safariURL.contains("google.com"))
         }
         
         testLink(withFormat: "http://")

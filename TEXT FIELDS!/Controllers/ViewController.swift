@@ -53,6 +53,12 @@ class ViewController: UIViewController {
         linkTextFieldView.inputTextField.addTarget(self, action: #selector(textFieldDidChange(textField:)), for: UIControl.Event.editingChanged)
         validationRulesTextFieldView.inputTextField.addTarget(self, action: #selector(textFieldDidChange(textField:)), for: UIControl.Event.editingChanged)
         
+        noDigitsFieldTextFieldView.inputTextField.accessibilityIdentifier = "noDigitsTextField"
+        inputLimitTextFieldView.inputTextField.accessibilityIdentifier = "inputLimitTextField"
+        onlyCharactersTextFieldView.inputTextField.accessibilityIdentifier = "onlyCharactersTextField"
+        linkTextFieldView.inputTextField.accessibilityIdentifier = "linkTextField"
+        validationRulesTextFieldView.inputTextField.accessibilityIdentifier = "validationRulesTextField"
+        
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(notification:)), name: UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(notification:)), name: UIResponder.keyboardWillHideNotification, object: nil)
     }
@@ -95,6 +101,7 @@ class ViewController: UIViewController {
         characterCounterLabel.text = "0/10"
         characterCounterLabel.textColor = UIColor(named: "blackColor")
         characterCounterLabel.font = UIFont(name: "Rubik-Regular", size: 13)
+        characterCounterLabel.accessibilityIdentifier = "characterCounterLabel"
         
         characterCounterLabel.translatesAutoresizingMaskIntoConstraints = false
         characterCounterLabel.heightAnchor.constraint(equalToConstant: 30).isActive = true

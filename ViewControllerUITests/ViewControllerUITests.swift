@@ -30,18 +30,6 @@ class ViewControllerUITests: XCTestCase {
         app.textFields["inputLimitTextField"].typeText("Long string with overflow characters")
         app.staticTexts["Only characters"].tap()
         app.textFields["inputLimitTextField"].tap()
-        
-        let input = NSAttributedString(string: app.textFields["inputLimitTextField"].value as! String)
-        input.enumerateAttributes(in: NSRange(location: 10, length: 26)) { (attributes, range, stop) in
-
-                    attributes.forEach { (key, value) in
-                        if key == NSAttributedString.Key.foregroundColor {
-                            let overflowInputColor = value as? UIColor
-                            XCTAssertEqual(overflowInputColor, UIColor(named: "redColor"))
-                        }
-                    }
-                }
-
         XCTAssertEqual(app.staticTexts["characterCounterLabel"].label, "36/10")
     }
         

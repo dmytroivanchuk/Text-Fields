@@ -81,7 +81,59 @@ class ViewControllerUITests: XCTestCase {
         testLink(withFormat: "www.")
     }
         
-    func test_validationRulesTextField_withInput_shouldShowValidationStatus() throws {
+    func test_validationRulesTextField_withUppercaseInput_shouldValidateUppercase() throws {
+        let app = XCUIApplication()
+        app.launch()
+        
+        app.textFields["validationRulesTextField"].tap()
+        app.textFields["validationRulesTextField"].typeText("H")
+        
+        XCTAssert(!app.staticTexts["✓ Min length 8 characters."].exists)
+        XCTAssert(!app.staticTexts["✓ Min 1 digit,"].exists)
+        XCTAssert(!app.staticTexts["✓ Min 1 lowercase,"].exists)
+        XCTAssert(app.staticTexts["✓ Min 1 capital required."].exists)
+    }
+        
+    func test_validationRulesTextField_withLowercaseInput_shouldValidateLowercase() throws {
+        let app = XCUIApplication()
+        app.launch()
+        
+        app.textFields["validationRulesTextField"].tap()
+        app.textFields["validationRulesTextField"].typeText("e")
+        
+        XCTAssert(!app.staticTexts["✓ Min length 8 characters."].exists)
+        XCTAssert(!app.staticTexts["✓ Min 1 digit,"].exists)
+        XCTAssert(app.staticTexts["✓ Min 1 lowercase,"].exists)
+        XCTAssert(!app.staticTexts["✓ Min 1 capital required."].exists)
+    }
+        
+    func test_validationRulesTextField_with8CharactersInput_shouldValidateLength() throws {
+        let app = XCUIApplication()
+        app.launch()
+        
+        app.textFields["validationRulesTextField"].tap()
+        app.textFields["validationRulesTextField"].typeText("!@#$%^&*()_+")
+        
+        XCTAssert(app.staticTexts["✓ Min length 8 characters."].exists)
+        XCTAssert(!app.staticTexts["✓ Min 1 digit,"].exists)
+        XCTAssert(!app.staticTexts["✓ Min 1 lowercase,"].exists)
+        XCTAssert(!app.staticTexts["✓ Min 1 capital required."].exists)
+    }
+    
+    func test_validationRulesTextField_withDigitInput_shouldValidateDigit() throws {
+        let app = XCUIApplication()
+        app.launch()
+        
+        app.textFields["validationRulesTextField"].tap()
+        app.textFields["validationRulesTextField"].typeText("1")
+        
+        XCTAssert(!app.staticTexts["✓ Min length 8 characters."].exists)
+        XCTAssert(app.staticTexts["✓ Min 1 digit,"].exists)
+        XCTAssert(!app.staticTexts["✓ Min 1 lowercase,"].exists)
+        XCTAssert(!app.staticTexts["✓ Min 1 capital required."].exists)
+    }
+    
+    func test_validationRulesTextField_withValidInput_shouldValidateLengthDigitLowercaseUppercase() throws {
         let app = XCUIApplication()
         app.launch()
         
@@ -92,6 +144,14 @@ class ViewControllerUITests: XCTestCase {
         XCTAssert(app.staticTexts["✓ Min 1 digit,"].exists)
         XCTAssert(app.staticTexts["✓ Min 1 lowercase,"].exists)
         XCTAssert(app.staticTexts["✓ Min 1 capital required."].exists)
+        
+        app.secureTextFields["validationRulesTextField"].doubleTap()
+        app.keyboards.keys["delete"].tap()
+        
+        XCTAssert(!app.staticTexts["✓ Min length 8 characters."].exists)
+        XCTAssert(!app.staticTexts["✓ Min 1 digit,"].exists)
+        XCTAssert(!app.staticTexts["✓ Min 1 lowercase,"].exists)
+        XCTAssert(!app.staticTexts["✓ Min 1 capital required."].exists)
     }
 
     func testLaunchPerformance() throws {

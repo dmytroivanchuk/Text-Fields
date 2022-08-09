@@ -188,10 +188,24 @@ extension ViewController: UITextFieldDelegate {
             switch textField {
             
             case noDigitsFieldTextFieldView.inputTextField:
-                textField.text = inputValidationModel.validateNoDigits(in: input)
+                textField.text = input.filter { !$0.isNumber }
             
             case inputLimitTextFieldView.inputTextField:
-                inputValidationModel.validateInputLimit(for: input, in: textField, inputLimit: 10, showResultIn: characterCounterLabel)
+                let inputLimit = 10
+                
+                characterCounterLabel.text = "\(input.count)/\(inputLimit)"
+                if input.count > inputLimit {
+                    let attributedText = NSMutableAttributedString(attributedString: textField.attributedText!)
+                    attributedText.addAttribute(NSAttributedString.Key.foregroundColor, value: UIColor(named: "redColor")!, range: NSRange(location: inputLimit, length: attributedText.length - inputLimit))
+                    textField.attributedText = attributedText
+                    
+                    characterCounterLabel.textColor = UIColor(named: "redColor")
+                    textField.layer.borderWidth = 1
+                    textField.layer.borderColor = UIColor(named: "redColor")?.cgColor
+                } else {
+                    characterCounterLabel.textColor = UIColor(named: "blackColor")
+                    textField.layer.borderColor = UIColor(named: "blueColor")?.cgColor
+                }
                 
             case linkTextFieldView.inputTextField:
                 timer.invalidate()
@@ -209,7 +223,15 @@ extension ViewController: UITextFieldDelegate {
             
             case validationRulesTextFieldView.inputTextField:
                 validationRulesTextFieldView.inputTextField.isSecureTextEntry = true
-                inputValidationModel.validateValidationRules(in: input, for: textField, setValidationStateInLabels: [lengthValidationLabel, digitValidationLabel, lowercaseValidationLabel, uppercaseValidationLabel])
+                
+                input.count >= 8 ? setValidationState(of: lengthValidationLabel, isValidated: true) : setValidationState(of: lengthValidationLabel, isValidated: false)
+
+                inputValidationModel.inputContains(regex: ".*[0-9]+.*", in: input) ? setValidationState(of: digitValidationLabel, isValidated: true) : setValidationState(of: digitValidationLabel, isValidated: false)
+
+                inputValidationModel.inputContains(regex: ".*[a-z]+.*", in: input) ? setValidationState(of: lowercaseValidationLabel, isValidated: true) : setValidationState(of: lowercaseValidationLabel, isValidated: false)
+
+                inputValidationModel.inputContains(regex: ".*[A-Z]+.*", in: input) ? setValidationState(of: uppercaseValidationLabel, isValidated: true) : setValidationState(of: uppercaseValidationLabel, isValidated: false)
+                
                 validationProgressView.progress = inputValidationModel.validationCoefficient
                 validationProgressView.progressTintColor = inputValidationModel.coefficientToColorRelation[inputValidationModel.validationCoefficient]
                 inputValidationModel.validationCoefficient = 0
@@ -224,7 +246,40 @@ extension ViewController: UITextFieldDelegate {
         switch textField {
         
         case onlyCharactersTextFieldView.inputTextField:
-            return inputValidationModel.validateOnlyCharacters(for: string, in: textField, numberOfLetters: 5, numberOfDigits: 5, separator: "-", lettersRegex: "[A-Za-z]", digitsRegex: "[0-9]")
+            if let input = textField.text {
+            
+                let numberOfLetters = 5
+                let numberOfDigits = 5
+                let separator = "-"
+                let lettersRegex = "[A-Za-z]"
+                let digitsRegex = "[0-9]"
+                
+                if string.isEmpty {
+                    return true
+                }
+
+                if input.count < numberOfLetters {
+                    if inputValidationModel.inputContains(regex: lettersRegex, in: string) {
+                        if (input + string).count == numberOfLetters {
+                            textField.text! += string + separator
+                            return false
+                        }
+                        return true
+                    }
+                    
+                } else if input.count == numberOfLetters {
+                    textField.text! += separator
+                    return false
+                
+                } else if input.count < numberOfLetters + numberOfDigits + separator.count {
+                    return inputValidationModel.inputContains(regex: digitsRegex, in: string)
+                }
+
+                return false
+            
+            } else {
+                return false
+            }
 
         default:
             return true
@@ -257,6 +312,20 @@ extension ViewController: UITextFieldDelegate {
         }
         textField?.layer.borderWidth = 1
         textField?.layer.borderColor = UIColor(named: "blueColor")?.cgColor
+    }
+    
+    func setValidationState(of label: UILabel, isValidated: Bool) {
+        if isValidated {
+            if !label.text!.contains("✓ ") {
+                label.text = "✓ " + label.text!
+            }
+            label.textColor = UIColor(named: "greenColor")
+            inputValidationModel.validationCoefficient += 0.25
+            
+        } else {
+            label.text = label.text?.replacingOccurrences(of: "✓ ", with: "")
+            label.textColor = UIColor(named: "blackColor")
+        }
     }
 }
 
